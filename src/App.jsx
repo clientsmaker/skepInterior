@@ -1,14 +1,17 @@
+import Navbar from "./Components/Navbar"
+import Home from "./Page/Home/Home"
 
 
 
 function App() {
  
-
+const count =10
   return (
     
-      <h1 className="text-3xl font-bold underline text-center mt-52">
-      Hello world!
-    </h1>
+     <>
+     <Navbar />
+     <Home />
+     </>
   )
 }
 
