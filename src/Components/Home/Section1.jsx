@@ -23,7 +23,7 @@ const Section1 = () => {
     }, [content.length]);
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 2000,
         slidesToShow: 3,
@@ -52,7 +52,7 @@ const Section1 = () => {
         <div className="flex flex-wrap items-start justify-center">
             <div className="w-full md:w-1/3 p-4 mt-20"> {/* Adjusted width for smaller devices */}
                 <h1 className='text-4xl font-semibold'>Skep Interiors <br />
-                 Offer you <span className='text-violet-800'>{content[currentIndex]}</span>
+                 Offer you <span className='text-amber-600 font-bold'>{content[currentIndex]}</span>
                 </h1>
             </div>
             <div className="w-full h-full md:w-2/3 p-4"> {/* Adjusted width for smaller devices */}

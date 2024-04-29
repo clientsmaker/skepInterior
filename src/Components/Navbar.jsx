@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className=' flex justify-between p-3'>
         <img src={icon} width={60} height={60} className='p-2'
         alt="" />
-   <div className='text-black text-center rounded-full bg-slate-200 p-3'>
+   <div className='text-black text-center rounded-full bg-rgb(255, 236, 214) p-3'>
    <RxHamburgerMenu className='w-8 h-8  shadow-lg' />
    </div>
     </div>
