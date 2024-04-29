@@ -1,17 +1,21 @@
+import { Route, Routes } from "react-router-dom"
 import Navbar from "./Components/Navbar"
 import Home from "./Page/Home/Home"
+import Layout from "./Features/Layout"
 
 
 
 function App() {
  
-const count =10
+
   return (
     
-     <>
-     <Navbar />
-     <Home />
-     </>
+
+     <Routes>
+      <Route path="/" element={<Layout />}>
+    <Route  exact path="/" element={<Home />}/>
+     </Route>
+     </Routes>
   )
 }
 
