@@ -19,6 +19,7 @@ import RecentWork from '../../Components/RecentWork';
 import Brands from '../../Components/Brands';
 import Features from '../../Components/Features';
 import WhatsappButton from '../../Components/WhatsappButton';
+import Footer from '../../Components/Footer';
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -124,7 +125,7 @@ const Home = () => {
    <Features />
       <Clients  />
       <Testimonials />
-      {/* <Contact /> */}
+     <Footer />
     </>
   );
 };
