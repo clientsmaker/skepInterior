@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'; // Import motion from Framer Motion
+import { motion, AnimatePresence } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // import Section1 from '../../Components/Home/Section1';
 import Navbar from '../../Components/Navbar';
-import HomeLottie from '../../Components/Lottie/HomeLottie';
 import Clients from '../../Components/Home/Clients';
 import Testimonials from '../../Components/Home/Testimonials';
 import hom from '../../assets/Images/homecard5.webp';
 import hom1 from '../../assets/Images/proj1.jpg';
 import hom2 from '../../assets/Images/homcard7.jpg';
 import Service from '../../Components/Home/Service';
+import About from '../../Components/Home/About';
+import Contact from '../../Components/Home/Contact';
+import Service2 from '../../Components/Home/Service2';
+import SectionCard3 from '../../Components/Home/SectionCard3';
+import RecentWork from '../../Components/RecentWork';
+import Brands from '../../Components/Brands';
+import Features from '../../Components/Features';
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,12 +56,28 @@ const Home = () => {
 
       
      
-      <section
-  className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${images[currentIndex]})` }}
->
+<section className="relative">
+<AnimatePresence >
+        {images.map((image, index) => (
+          <motion.div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentIndex ? 1 : 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+        ))}
+      </AnimatePresence>
+
 <Navbar  />
   <div
-    className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+    className="absolute inset-0  sm:bg-transparent sm:from-white/95 sm:to-white/25 "
   ></div>
 
   <div
@@ -81,20 +103,26 @@ const Home = () => {
           Get Started
         </a>
 
-        <a
+        {/* <a
           href="#"
           className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
         >
           Learn More
-        </a>
+        </a> */}
       </div>
     </div>
   </div>
 </section>
+<About />
 <Service />
-      {/* <Section1  /> */}
+{/* <Service2 /> */}
+{/* <SectionCard3 /> */}
+   <RecentWork />
+   {/* <Brands /> */}
+   <Features />
       <Clients  />
       <Testimonials />
+      {/* <Contact /> */}
     </>
   );
 };

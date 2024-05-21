@@ -2,8 +2,8 @@ import React from 'react'
 
 const Clients = () => {
   return (
-    // <div className="bg-gradient-to-tr from-indigo-100 via-purple-50 to-cyan-100 dark:from-indigo-950 dark:via-purple-950 dark:to-teal-950 dark:text-gray-100">
-    <div className="container mx-auto px-4 py-16 lg:px-8 lg:py-32 xl:max-w-7xl">
+    <div className=" mt-14">
+    <div className="container mx-auto px-4 py-8 lg:px-8 lg:py-16 xl:max-w-7xl">
       <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex h-20 items-center justify-center">
           <div className="inline-flex items-center gap-2 text-2xl font-semibold">
@@ -75,7 +75,7 @@ const Clients = () => {
         </div>
       </div>
     </div>
-//   </div>
+  </div>
   )
 }
 
