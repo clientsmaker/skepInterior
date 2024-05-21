@@ -18,6 +18,7 @@ import SectionCard3 from '../../Components/Home/SectionCard3';
 import RecentWork from '../../Components/RecentWork';
 import Brands from '../../Components/Brands';
 import Features from '../../Components/Features';
+import WhatsappButton from '../../Components/WhatsappButton';
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -113,6 +114,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+<WhatsappButton />
 <About />
 <Service />
 {/* <Service2 /> */}
