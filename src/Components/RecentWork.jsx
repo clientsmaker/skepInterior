@@ -22,7 +22,7 @@ const RecentWork = () => {
               <img className="w-full h-full object-cover" src={image1} alt="Work 1" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white text-xl mb-4">Lavender ambient interior</h3>
-                <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a>
+                {/* <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a> */}
               </div>
             {/* </a> */}
           </div>
@@ -33,7 +33,7 @@ const RecentWork = () => {
               <img className="w-full h-full object-cover" src={image2} alt="Work 2" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white text-xl mb-4">Ambient interior</h3>
-                <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a>
+                {/* <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a> */}
               </div>
             {/* </a> */}
           </div>
@@ -44,7 +44,7 @@ const RecentWork = () => {
               <img className="w-full h-full object-cover" src={image3} alt="Work 3" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white text-xl mb-4">Ambient interior</h3>
-                <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a>
+                {/* <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a> */}
               </div>
             {/* </a> */}
           </div>
@@ -55,7 +55,7 @@ const RecentWork = () => {
               <img className="w-full h-full object-cover" src={image4} alt="Work 4" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-white text-xl mb-4">Lavender ambient interior</h3>
-                <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a>
+                {/* <a href="project-details.html" className="bg-indigo-600 text-white py-2 px-4 rounded uppercase mt-5">More Details</a> */}
               </div>
             {/* </a> */}
           </div>
