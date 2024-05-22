@@ -4,7 +4,7 @@ import whatsappIcon from '../assets/Images/wats.webp';
 const WhatsappButton = () => {
 
   const handleClick = () => {
-    const phoneNumber = '971523234010';
+    const phoneNumber = '971581008995';
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
     window.open(url, "_blank");
   };
