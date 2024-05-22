@@ -6,7 +6,7 @@ const contactDetails = [
   {
     title: "Contact Us",
     items: [
-      "Phone: +971 4 3433 387",
+      "Phone: +971 58 100 8995",
       "Email: ask@skepinternational.com",
       // "Address: 123 Interior St, Design City, 45678"
     ]
