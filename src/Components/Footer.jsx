@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch , FaLinkedin} from "react-icons/fa";
 import logo from '../assets/Images/logo white.png'; // Update the path accordingly
 
 const contactDetails = [
@@ -14,9 +14,9 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
-  { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/" },
-  { name: "Twitter", icon: FaTwitter, link: "https://twitter.com/" },
+  { name: "Facebook", icon: FaFacebook, link: "https://m.facebook.com/profile.php?id=61557046674427" },
+  { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/skep_interiors_uae_/" },
+  { name: "Twitter", icon: FaLinkedin, link: "https://www.linkedin.com/company/skep-interiors/" },
 
 ];
 
