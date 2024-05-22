@@ -87,14 +87,13 @@ const Home = () => {
   >
     <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h1 className="text-3xl font-extrabold sm:text-5xl">
-        Let us find your
+      Transforming Spaces Into
 
-        <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
+        <strong className="block font-extrabold text-rose-700">  Dream Place </strong>
       </h1>
 
       <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
+      At Skep Interiors, we specialize in creating bespoke interiors that reflect your unique style and personality. Let's turn your vision into a stunning reality.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4 text-center">

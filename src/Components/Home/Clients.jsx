@@ -4,7 +4,13 @@ import client1 from '../../assets/Images/client1.jpeg';
 import client2 from '../../assets/Images/client2.jpeg';
 import client3 from '../../assets/Images/client3.jpeg';
 import client4 from '../../assets/Images/client4.jpeg';
-import client5 from '../../assets/Images/client5.jpeg';
+import client6 from '../../assets/Images/client6.jpeg';
+import client7 from '../../assets/Images/client7.jpeg';
+import client5 from '../../assets/Images/client8.jpeg';
+import client8 from '../../assets/Images/client5.jpeg';
+import client9 from '../../assets/Images/client9.jpeg';
+import client10 from '../../assets/Images/client10.jpeg';
+import client11 from '../../assets/Images/client11.jpeg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -67,6 +73,30 @@ const Clients = () => {
           </div>
           <div className="flex flex-col items-center">
             <img src={client5} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client6} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client7} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client8} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client9} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client10} alt="Client 5" className="h-20" />
+           
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={client11} alt="Client 5" className="h-20" />
            
           </div>
         </Slider>
