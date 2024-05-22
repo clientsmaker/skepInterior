@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const Features = () => {
   return (
-    <section className="feature-area py-16" style={{ backgroundColor: '#c6b069' }}>
+    <section
+      className="feature-area py-16"
+      style={{ backgroundColor: "#c6b069" }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <div className="w-full text-center pb-10">
-            <h1 className="text-3xl font-bold text-white pb-5">Some Features that Made us Unique</h1>
-            <p className="text-white">Who are in extremely love with eco friendly system.</p>
+            <h1 className="text-3xl font-bold text-white pb-5">
+              Some Features that Made us Unique
+            </h1>
+            <p className="text-white">
+              Who are in extremely love with eco friendly system.
+            </p>
           </div>
         </div>
         <div className="flex flex-wrap">
@@ -15,10 +22,15 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-user text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Expert Technicians</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Expert Technicians
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                Computer users and programmers have become so accustomed to using Windows, even for the changing.
+                Our team of expert technicians is dedicated to pushing
+                boundaries, exploring new possibilities, and creating spaces
+                that inspire and delight.By leveraging advanced software and
+                tools
               </p>
             </div>
           </div>
@@ -26,10 +38,15 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-license text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Professional Service</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Professional Service
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                Finding the perfect learning tool for Flash is a daunting task to any novice web developer. One can find help.
+                We provide personalized consultations to understand your vision
+                and requirements. Our expert designers work closely with you to
+                develop a tailored design plan that aligns with your aesthetic
+                preferences and functional needs
               </p>
             </div>
           </div>
@@ -37,10 +54,15 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-phone text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Great Support</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Great Support
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun and excitement.
+                Each project is assigned a dedicated project manager who acts as
+                your single point of contact. They coordinate all aspects of the
+                project, keeping you informed and ensuring that everything runs
+                smoothly
               </p>
             </div>
           </div>
@@ -48,10 +70,15 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-rocket text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Technical Skills</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Technical Skills
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                “The moment you think of buying a Web Hosting Plan, you know one thing – So many choices, which one to choose.
+                At Skep, we are committed to staying at the forefront of
+                technological advancements in the interior design industry to
+                ensure that we provide our clients with the best possible
+                solutions for their spaces
               </p>
             </div>
           </div>
@@ -59,10 +86,16 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-diamond text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Highly Recommended</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Highly Recommended
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                Many conventional colleges and universities are now offering online DVD repair courses, which are the exact same.
+                Skep Interiors works with well-established Building Management
+                companies in United Arab Emirates namely Dubai Outlet Mall,
+                Dubai Festival City Mall, Dubai Mall and Dubai Properties to
+                provide skills exchange and innovative professional services to
+                satisfy client’s requirements.
               </p>
             </div>
           </div>
@@ -70,10 +103,15 @@ const Features = () => {
             <div className="single-feature bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:bg-black group">
               <a href="#" className="title flex items-center mb-4">
                 <span className="lnr lnr-bubble text-2xl"></span>
-                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">Positive Reviews</h4>
+                <h4 className="ml-4 text-xl font-semibold transition duration-300 group-hover:text-yellow-400">
+                  Positive Reviews
+                </h4>
               </a>
               <p className="text-gray-700 transition duration-300 group-hover:text-white">
-                So you have your new digital camera and clicking away to glory anything and everything in sight. Now you want.
+                our client commended our exceptional customer support throughout
+                the entire process. They praised our team for being attentive,
+                responsive, and dedicated to ensuring their needs were met every
+                step of the way
               </p>
             </div>
           </div>

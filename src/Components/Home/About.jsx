@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import ser from '../../assets/Images/about.jpg';
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import ser from "../../assets/Images/about.jpg";
 
 const About = () => {
   const controls = useAnimation();
@@ -13,7 +13,7 @@ const About = () => {
       controls.start({
         x: 0,
         opacity: 1,
-        transition: { duration: 0.5 }
+        transition: { duration: 0.5 },
       });
     }
   }, [controls, inView]);
@@ -22,7 +22,7 @@ const About = () => {
     controls.start({
       x: 0,
       opacity: 1,
-      transition: { duration: 0.4 }
+      transition: { duration: 0.4 },
     });
   };
 
@@ -31,14 +31,14 @@ const About = () => {
       x: 0,
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5 },
     });
   };
 
   const resetAnimation = () => {
     controls.start({
       x: -20,
-      opacity: 0
+      opacity: 0,
     });
   };
 
@@ -46,7 +46,10 @@ const About = () => {
     <section id="about">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-          <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full" ref={ref}>
+          <div
+            className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+            ref={ref}
+          >
             {inView && (
               <motion.img
                 alt=""
@@ -67,16 +70,33 @@ const About = () => {
             onMouseEnter={animateContent}
             onMouseLeave={resetAnimation}
           >
-            <h2 className="text-3xl text-gray-400 font-bold sm:text-4xl">About</h2>
-            <p className="mt-4 text-gray-300">
-              At TheClientsMaker.com, we understand the power of compelling content in capturing the attention of your audience and driving meaningful engagement. Our dedicated team of content creators is here to help you craft content that resonates with your target audience and achieves your business goals.<br/>
-              Tailored Content Solutions: We believe in creating content that is customized to meet the unique needs and objectives of your business. Whether you need blog posts, articles, social media content, or more, we've got you covered
+            <h2 className="text-3xl text-gray-400 font-bold sm:text-4xl">
+              About
+            </h2>
+            <p className="mt-4 text-gray-500">
+              Our multi discipline team with more than 10 years of experience
+              combines eye-catching interior design, intelligent space planning,
+              leading-edge technology and a flawless finish to create uplifting,
+              inspirational interiors to change your working environment and
+              improve your business. Our expert designers and project team
+              always cherish a dream of giving the best products and services
+              with professional grit & resilience. Delighting clients is what
+              drives us. We believe in creating Innovation and Integrity for
+              future generations & delivering The Best That Exists.Our approach
+              is holistic, ensuring every element of your workspace is
+              considered. From the initial concept to the final touches, our
+              team meticulously plans and executes each project with an
+              unwavering commitment to quality and excellence.Our approach is
+              holistic, ensuring every element of your workspace is considered.
+              From the initial concept to the final touches, our team
+              meticulously plans and executes each project with an unwavering
+              commitment to quality and excellence
             </p>
           </motion.div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default About;
