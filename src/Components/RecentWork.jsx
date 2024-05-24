@@ -12,11 +12,11 @@ const RecentWork = () => {
       <div className="flex justify-center">
         <div className="w-full text-center pb-10">
           <h1 className="text-3xl font-bold pb-5">Our Recent Works may impress you</h1>
-          <p>Who are in extremely love with eco friendly system.</p>
+          {/* <p>Who are in extremely love with eco friendly system.</p> */}
         </div>
       </div>
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-2/3 p-4">
+      <div className="flex flex-wrap lg:ml-32 lg:mr-32">
+        <div className="w-full lg:w-2/3 p-4 justify-center items-center">
           <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ height: '300px' }}>
             {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
               <img className="w-full h-full object-cover" src={image1} alt="Work 1" />

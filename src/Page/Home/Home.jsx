@@ -14,7 +14,6 @@ import Service from '../../Components/Home/Service';
 import About from '../../Components/Home/About';
 import Contact from '../../Components/Home/Contact';
 import Service2 from '../../Components/Home/Service2';
-import SectionCard3 from '../../Components/Home/SectionCard3';
 import RecentWork from '../../Components/RecentWork';
 import Brands from '../../Components/Brands';
 import Features from '../../Components/Features';
@@ -85,7 +84,7 @@ const Home = () => {
   <div
     className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
-    <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+    <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right bg-gray-500 bg-opacity-10 p-8 rounded-md ">
       <h1 className="text-3xl font-extrabold sm:text-5xl text-white">
       Transforming Spaces Into
 
@@ -117,10 +116,8 @@ const Home = () => {
 <WhatsappButton />
 <About />
 <Service />
-{/* <Service2 /> */}
-{/* <SectionCard3 /> */}
    <RecentWork />
-   {/* <Brands /> */}
+ 
    <Features />
       <Clients  />
       <Testimonials />
