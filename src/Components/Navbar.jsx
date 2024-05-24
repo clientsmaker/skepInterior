@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   return (
     <div className=' flex justify-between p-3 absolute'>
-        <img src={icon} width={150} height={100} className='p-2'
+        <img src={icon}  width={150} height={100} className='p-2'
         alt="" />
          {/* <h3 className="ml-10 block font-extrabold text-white mt-6 text-xl ">
       <h1 className="text-3xl font-extrabold sm:text-5xl" style={{ fontFamily: 'Cinzel, serif', lineHeight: '1.2' }}>
