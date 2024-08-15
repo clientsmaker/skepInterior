@@ -71,7 +71,7 @@ const Navbar = ({ scrollToGallery, scrollToClientLogos, scrollToContact }) => {
 
   const projectCount = 250
   const clientCount = 150;
-  
+
   const toggleMenu = () => {
     setIsOpen(prevState => !prevState);
   };
@@ -94,7 +94,7 @@ const Navbar = ({ scrollToGallery, scrollToClientLogos, scrollToContact }) => {
             <button onClick={scrollToGallery} className="relative flex items-center hover:text-orange-500">
               Projects
               <span className="absolute top-0 right-0 flex items-center justify-center w-6 h-6 bg-orange-500 text-white text-xs font-bold rounded-full ">
-               {projectCount}
+               {projectCount } 
                </span>
             </button>
             <button onClick={scrollToClientLogos} className="relative flex items-center hover:text-orange-500">

@@ -216,17 +216,18 @@ const Home = () => {
         <Gallery />
       </section>
 
-  <section ref={clientLogosRef}> 
+
         <ClientLogos />
-      </section>
+      
 
       {/* <RecentWork /> */}
       {/* <Features /> */}
       {/* <Clients /> */}
       
       <Testimonials />
-     
+      <section ref={clientLogosRef}> 
      <OurTeam />
+     </section>
      
      <VideoComponent /> 
      
