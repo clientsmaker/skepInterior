@@ -4,7 +4,7 @@ import thumbnail from '../../assets/Images/LAkids-1.jpg'; // Adjust the path if 
 const VideoComponent = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const videoUrl = 'https://www.youtube.com/embed/your-video-id'; // Replace with your YouTube video URL
+  const videoUrl = 'https://www.youtube.com/shorts/g4lnZAeiH5o'; // Replace with your YouTube video URL
 
   const handlePlayButton = () => {
     setIsPlaying(true);

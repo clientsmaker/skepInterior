@@ -47,7 +47,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center hover:text-white">
               <FaYoutube className="mr-2 text-2xl" />
-              <a href="https://www.linkedin.com/company/skep-interiors/" target="_blank" rel="noopener noreferrer">skep_interiors_uae_</a>
+              <a href="https://www.youtube.com/@skepinteriors8011" target="_blank" rel="noopener noreferrer">skep_interiors_uae_</a>
             </li>
           </ul>
         </div>
