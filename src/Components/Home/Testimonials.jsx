@@ -1,224 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
+import img1 from '../../assets/Images/ser1a.jpg';
+import img2 from '../../assets/Images/ser2a.jpg';
+import img3 from '../../assets/Images/ser3a.jpg';
+
+const reviews = [
+  {
+    name: "Paul Starr",
+    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
+    location: "BUSINESS BAY, DUBAI",
+    review: "Skep truly exceeded our expectations with their interior design expertise. Their team brought a fresh perspective to our space, creating a harmonious blend of functionality and style that perfectly suited our needs. We were impressed by their attention to detail and ability to transform our vision into reality.",
+    spaceImage: img1
+  },
+  {
+    name: "Sarah Johnson",
+    image: "https://plus.unsplash.com/premium_photo-1688350839154-1a131bccd78a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ5fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    location: "BUSINESS BAY, DUBAI",
+    review: "Working with Skep was a delightful experience from start to finish. Their professional approach, creative solutions, and impeccable customer service set them apart in the world of interior design. We were thrilled with the final result and would highly recommend Skep to anyone looking for top-notch design services.",
+    spaceImage: img2
+  },
+  {
+    name: "Michael Lee",
+    image: "https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    location: "BUSINESS BAY, DUBAI",
+    review: " The entire process with Skep was smooth and enjoyable. Their team is knowledgeable and responsive, and they have a keen eye for design. They listened to our needs and delivered a stunning result that we couldn't be happier with. Highly recommended!",
+    spaceImage: img3
+  }
+];
 
 const Testimonials = () => {
+  const [currentReview, setCurrentReview] = useState(0);
+
+  const handleNext = () => {
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
   return (
-    <section className="">
-      <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Read trusted reviews from our customers
-        </h2>
+    <section className="bg-gray-900 text-white">
+      <div className="mx-auto max-w-screen-xl ">
+        
+        <div className="flex flex-col lg:flex-row  space-y-8  ">
+          
+        {/* Buttons for large screens */}
+<div className="hidden lg:flex flex-col items-center justify-between w-2 h-1/6 lg:w-8 space-y-3 p-10 ">
+  <button
+    onClick={handleNext}
+    className="transform -rotate-90 origin-center text-2xl mt-6 px-4 py-2 text-white  lg:h-40"
+    style={{ minWidth: '200px' }}
+  >
+    N e x t
+  </button>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-          <blockquote
-            className="rounded-lg  p-6 shadow-sm sm:p-8"
-            style={{ backgroundColor: "#fdf8e1" }}
-          >
-            <div className="flex items-center gap-4">
-              <img
-                alt=""
-                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                className="size-14 rounded-full object-cover"
-              />
+  {/* Previous button */}
+  <button
+    onClick={handlePrevious}
+    className="transform -rotate-90 origin-center text-2xl px-4 py-2 border-cyan-50 text-white rounded lg:h-40"
+    style={{ minWidth: '200px' }}
+  >
+    P r e v i o u s
+  </button>
+</div>
 
-              <div>
-                <div className="flex justify-center gap-0.5 text-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
 
-                <p className="mt-0.5 text-lg font-medium text-gray-900">
-                  Paul Starr
-                </p>
-              </div>
-            </div>
+          {/* Space Image */}
+          <div className="w-full lg:w-1/4 lg:h-full flex items-center justify-center">
+            <img
+              src={reviews[currentReview].spaceImage}
+              alt="Space"
+              className=" shadow-lg lg:h-fit w-auto lg:w-full lg:-mt-8"
+            />
+          </div>
 
-            <p className="mt-4 text-gray-700">
-              Skep truly exceeded our expectations with their interior design
-              expertise. Their team brought a fresh perspective to our space,
-              creating a harmonious blend of functionality and style that
-              perfectly suited our needs. We were impressed by their attention
-              to detail and ability to transform our vision into reality
+          {/* Client Info */}
+          <div className="py-12 px-16 flex flex-col items-center lg:items-start  space-y-4 lg:space-y-10 lg:pl-28 ">
+          <p className="text-2xl font-medium text-white">
+              {reviews[currentReview].name}
             </p>
-          </blockquote>
-
-          <blockquote
-            className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8"
-            style={{ backgroundColor: "#fdf8e1" }}
-          >
-            <div className="flex items-center gap-4">
-              <img
-                alt=""
-                src="https://plus.unsplash.com/premium_photo-1688350839154-1a131bccd78a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ5fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D"
-                className="size-14 rounded-full object-cover"
-              />
-
-              <div>
-                <div className="flex justify-center gap-0.5 text-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg> */}
-                </div>
-
-                <p className="mt-0.5 text-lg font-medium text-gray-900">
-                Sarah Johnson
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-4 text-gray-700">
-              Working with Skep was a delightful experience from start to
-              finish. Their professional approach, creative solutions, and
-              impeccable customer service set them apart in the world of
-              interior design. We were thrilled with the final result and would
-              highly recommend Skep to anyone looking for top-notch design
-              services
+            <img
+              alt={reviews[currentReview].name}
+              src={reviews[currentReview].image}
+              className="w-32 h-32 rounded-full object-cover"
+            />
+            
+            <p className="text-xs text-gray-400 font-thin">
+              {reviews[currentReview].location}
             </p>
-          </blockquote>
+          </div>
 
-          <blockquote
-            className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8"
-            style={{ backgroundColor: "#fdf8e1" }}
+          {/* Review Text */}
+          <div className="w-full lg:w-1/2 lg:pr-20 lg:pt-10 lg:pl-3 ">
+            <blockquote className="rounded-lg p-6 shadow-sm sm:p-8 bg-red-400">
+              <p className="text-white text-lg lg:text-2xl lg:">
+                " {reviews[currentReview].review} "
+              </p>
+            </blockquote>
+          </div>
+
+        </div>
+
+        {/* Buttons for small screens */}
+        <div className="flex lg:hidden justify-center space-x-4 mt-8">
+          <button
+            onClick={handlePrevious}
+            className="text-xl px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700"
           >
-            <div className="flex items-center gap-4">
-              <img
-                alt=""
-                src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D"
-                className="size-14 rounded-full object-cover"
-              />
-
-              <div>
-                <div className="flex justify-center gap-0.5 text-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
-
-                <p className="mt-0.5 text-lg font-medium text-gray-900">
-                Michael Brown
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-4 text-gray-700">
-              Skep's interior design services are unparalleled. Their team of
-              talented designers not only captured our aesthetic preferences but
-              also added their own unique touch to elevate the overall design.
-              The seamless communication and support we received throughout the
-              project made the entire process stress-free and enjoyable. 
-            </p>
-          </blockquote>
+            Previous
+          </button>
+          <button
+            onClick={handleNext}
+            className="text-xl px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700"
+          >
+            Next
+          </button>
         </div>
       </div>
     </section>
