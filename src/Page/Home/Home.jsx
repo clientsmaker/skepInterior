@@ -27,12 +27,20 @@ import DesignComponent from '../../Components/Home/DesignComponent';
 import OurTeam from '../../Components/Home/OurTeam';
 import VideoComponent from '../../Components/Home/VideoComponent';
 import ClientLogos from '../../Components/Home/ClientLogos';
+import Modal from '../../Components/Modal';
+
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const image = [hom]; // Different images for each service
   // Different images for each service
   const [numServicesToShow, setNumServicesToShow] = useState(4);
+
+  // Modal
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   // routing
   const galleryRef = useRef(null);
@@ -132,11 +140,13 @@ const Home = () => {
               <a
                 href="#"
                 className="block w-full rounded-full border-2 p-3 text-xs font-extralight text-white sm:w-auto"
+                onClick={openModal}
               >
                 S C H E D U L E A C A L L
               </a>
             </div>
           </div>
+          {/* <Modal isOpen={isModalOpen} onClose={closeModal}/> */}
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-white w-full sm:w-2/3 lg:w-1/3">
   <div className="container mx-auto px-4 py-6">
