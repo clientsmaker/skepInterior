@@ -62,7 +62,7 @@
 // export default Navbar;
 
 import React, { useState, useRef } from 'react';
-import icon from '../assets/Images/skep logo.png';
+import icon from '../assets/Images/skep logo.svg';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 
